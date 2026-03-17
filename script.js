@@ -1,6 +1,7 @@
 let isplayerOne = true;
 let cells = document.getElementsByClassName("cell");
 
+//HOLA
 for (let i=0; i< cells.length; i++){
     cells[i].addEventListener('click', userMove);
 }
