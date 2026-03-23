@@ -1,3 +1,4 @@
+// Variables para controlar el estado del juego
 let isplayerOne = true;
 let cells = document.getElementsByClassName("cell");
 
