@@ -1,12 +1,18 @@
 let isplayerOne = true;
 let cells = document.getElementsByClassName("cell");
 
-//HOLA
+let isGameOver = false; 
+
 for (let i=0; i< cells.length; i++){
     cells[i].addEventListener('click', userMove);
 }
 
 function userMove(e){
+    //Si el juego ya terminó salimos de la función sin hacer nada
+    if (isGameOver) {
+        return; 
+    }
+
     let cellvalue = e.target.innerHTML;
     if (!cellvalue.length){
         e.target.innerHTML = isplayerOne? 'X' : 'O';
@@ -35,22 +41,28 @@ function checkLine(c1, c2, c3){
 
 function showWinner(player){
     document.querySelector('#results').innerHTML = player + " win";
+    
+    //Bloquea el tablero porque ya hay un ganador
+    isGameOver = true; 
 }
-
 
 let restartBtn = document.getElementById("restart");
 
+// Escuchar el clic en el botón
 restartBtn.addEventListener('click', restartGame);
 
 function restartGame() {
-
+    //Limpiar el texto de todas las celdas
     for (let i = 0; i < cells.length; i++) {
         cells[i].innerHTML = "";
     }
     
-
+    //Limpiar el texto del ganador
     document.querySelector('#results').innerHTML = "";
     
-
+    //Reiniciar el turno para que las 'X' empiecen de nuevo
     isplayerOne = true;
+
+    //Desbloquear el tablero para la nueva partida
+    isGameOver = false; 
 }
