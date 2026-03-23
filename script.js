@@ -67,3 +67,5 @@ function restartGame() {
     // NUEVO: Desbloquear el tablero para la nueva partida
     isGameOver = false; 
 }
+
+// Fin del código
