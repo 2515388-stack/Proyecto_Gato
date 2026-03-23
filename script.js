@@ -36,3 +36,21 @@ function checkLine(c1, c2, c3){
 function showWinner(player){
     document.querySelector('#results').innerHTML = player + " win";
 }
+
+
+let restartBtn = document.getElementById("restart");
+
+restartBtn.addEventListener('click', restartGame);
+
+function restartGame() {
+
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].innerHTML = "";
+    }
+    
+
+    document.querySelector('#results').innerHTML = "";
+    
+
+    isplayerOne = true;
+}
