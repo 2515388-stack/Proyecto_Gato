@@ -33,6 +33,7 @@ function checkLine(c1, c2, c3){
     }
 }
 
+// 5º COMMIT --> PROFESOR GAZ
 function showWinner(player){
     document.querySelector('#results').innerHTML = player + " win";
 }
