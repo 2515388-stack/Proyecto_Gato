@@ -1,10 +1,8 @@
-body{
+body {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(255, 0, 212);
-    color: rgb(0, 255, 13);
-    background-color: rgb(0, 162, 255);
-    color: rgb(0, 217, 255);
+    background-color: rgb(0, 162, 255); /* Azul principal */
+    color: rgb(0, 217, 255); /* Cian para el texto */
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     display: grid;
@@ -12,55 +10,67 @@ body{
     overflow: hidden;
 }
 
-#game .cell{
+/* NUEVO: Estilo para el marcador */
+#scoreboard {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#scoreX, #scoreO {
+    color: rgb(0, 255, 213); /* Resalta los números con el cian que te gusta */
+}
+
+#game .cell {
     width: 90px;
     height: 90px;
     font-size: 3rem;
     display: grid;
     place-items: center;
-
-    border: 1px solid rgb(0, 238, 255);
-
-    border: 1px solid rgb(0, 26, 255);
-
+    border: 1px solid rgb(0, 26, 255); /* Azul fuerte */
     float: left;
 }
 
 #game {
     width: 276px;
     text-align: center;
-
 }
 
-#results{
+#results {
     position: relative;
     top: 10px;
-    height: 1rem;
-
-
+    height: 1.5rem;
+    margin-bottom: 10px;
 }
 
-#restart{
-   margin-top: 30px;
-   padding: 10px 20px;
-   font-size: 1.2rem;
-   background-color: seagreen;
-   color: turquoise;
-   border: none;
-   border-radius: 5px;
+#restart {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: seagreen;
+    color: turquoise;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-#restart:hover{
-   background-color: turquoise;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition: 0.3s; /* Para que el cambio de color sea suave */
 }
 
-#text{
+#restart:hover {
+    background-color: turquoise;
+    color: seagreen;
+}
+
+/* Este es el estilo por si usas un texto absoluto encima */
+#text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
     color: rgb(0, 255, 213);
-
+    pointer-events: none; /* Para que no estorbe los clics */
 }
