@@ -45,7 +45,7 @@ function checkLine(c1, c2, c3){
 
 function showWinner(player){
     document.querySelector('#results').innerHTML = player + " win";
-}
+}{
     
     // NUEVO: Bloqueamos el tablero porque ya hay un ganador
     isGameOver = true; 
