@@ -80,7 +80,7 @@ function restartGame() {
     // 2. Limpiar el texto del ganador
     document.querySelector('#results').innerHTML = "";
     
-    // 3. Reiniciar el turno y el estado del juego
+    // 3. Reiniciar el turno y el estado del juego.
     isplayerOne = true;
     isGameOver = false; 
 }
